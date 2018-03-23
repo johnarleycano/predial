@@ -1,0 +1,128 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2017-12-21 10:25:20 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 10:25:20 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 10:25:20 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 10:25:20 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 10:25:23 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 10:25:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 10:25:23 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 10:25:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 11:27:55 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 11:27:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 11:27:55 --> Severity: Notice  --> Undefined variable: requeridos /var/www/predialdevimed/application/models/prediosdao.php 427
+ERROR - 2017-12-21 16:36:05 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:36:05 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:36:05 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:36:05 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:36:17 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:36:17 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:36:17 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:36:17 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:36:19 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:36:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:36:19 --> Severity: Notice  --> Undefined variable: requeridos /var/www/predialdevimed/application/models/prediosdao.php 427
+ERROR - 2017-12-21 16:37:26 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:37:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:37:26 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:37:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:37:29 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:37:29 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:37:29 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:37:29 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:09 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:09 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:15 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:15 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:26 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:26 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:26 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:46 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:46 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:54 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:54 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:57 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:38:57 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:38:57 --> Severity: Notice  --> Undefined variable: requeridos /var/www/predialdevimed/application/models/prediosdao.php 427
+ERROR - 2017-12-21 16:39:42 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:39:42 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:39:43 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:39:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:40:32 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:40:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:40:37 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:40:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:40:37 --> Severity: Notice  --> Undefined variable: requeridos /var/www/predialdevimed/application/models/prediosdao.php 427
+ERROR - 2017-12-21 16:41:10 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:41:10 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:41:11 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:41:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:41:36 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:41:36 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:42:31 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:42:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:42:34 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:42:34 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:42:34 --> Severity: Notice  --> Undefined variable: requeridos /var/www/predialdevimed/application/models/prediosdao.php 427
+ERROR - 2017-12-21 16:42:40 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:42:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:42:41 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:42:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:42:59 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:42:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:42:59 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:42:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:43:02 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:43:02 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:43:02 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:43:02 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:43:08 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:43:08 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:43:17 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:43:17 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:43:17 --> Severity: Notice  --> Undefined variable: requeridos /var/www/predialdevimed/application/models/prediosdao.php 427
+ERROR - 2017-12-21 16:43:23 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:43:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:43:23 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:43:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:43:27 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:43:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:43:27 --> Severity: Notice  --> Undefined variable: requeridos /var/www/predialdevimed/application/models/prediosdao.php 427
+ERROR - 2017-12-21 16:49:30 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:49:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:49:31 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:49:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:49:34 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:49:34 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:49:35 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:49:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:49:37 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:49:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:49:37 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:49:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:52:21 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:52:21 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:52:21 --> Severity: Notice  --> Undefined variable: requeridos /var/www/predialdevimed/application/models/prediosdao.php 427
+ERROR - 2017-12-21 16:52:24 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:52:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:52:24 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:52:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 16:52:24 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 16:52:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 17:33:56 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 17:33:56 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 17:33:56 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 17:33:56 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 17:33:58 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 17:33:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-12-21 17:33:58 --> Severity: Notice  --> Only variable references should be returned by reference /var/www/predialdevimed/site_predios/core/Common.php 257
+ERROR - 2017-12-21 17:33:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91

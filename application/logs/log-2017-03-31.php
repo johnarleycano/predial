@@ -1,0 +1,15 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2017-03-31 07:00:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 07:00:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 08:05:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 08:11:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 08:11:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 08:25:16 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 08:25:16 --> Severity: Notice  --> Undefined variable: requeridos /var/www/predialdevimed/application/models/prediosdao.php 427
+ERROR - 2017-03-31 18:20:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 18:20:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 18:20:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 18:20:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 18:20:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/predialdevimed/site_predios/database/drivers/mysql/mysql_driver.php 91
+ERROR - 2017-03-31 18:20:47 --> Severity: Notice  --> Undefined variable: requeridos /var/www/predialdevimed/application/models/prediosdao.php 427
