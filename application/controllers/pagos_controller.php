@@ -37,7 +37,7 @@ class Pagos_controller extends CI_Controller
 	function vista_actualizar($ficha_predial) {
 		$this->load->model('PagosDAO');
 		
-		$ficha_predial = str_replace("_", " ", $ficha_predial);
+		// $ficha_predial = str_replace("_", " ", $ficha_predial);
 
 		$pagos = $this->PagosDAO->obtener_pagos($ficha_predial);
 
