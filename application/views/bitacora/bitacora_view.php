@@ -7,8 +7,8 @@
 <!-- estilos -->
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/estilo.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/cupertino/jquery-ui-1.8.16.custom.css" type="text/css" />
-<!-- <link rel="stylesheet" href="<?php echo base_url(); ?>css/base/jquery.ui.all.css" type="text/css" /> -->
-<!-- <link rel="stylesheet" href="<?php echo base_url(); ?>css/base/jquery.ui.datepicker.css" type="text/css" />-->
+<!-- <link rel="stylesheet" href="<?php // echo base_url(); ?>css/base/jquery.ui.all.css" type="text/css" /> -->
+<!-- <link rel="stylesheet" href="<?php // echo base_url(); ?>css/base/jquery.ui.datepicker.css" type="text/css" />-->
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/demos.css" type="text/css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/fancydropdown.css" type="text/css">
 

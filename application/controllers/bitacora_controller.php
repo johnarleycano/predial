@@ -93,7 +93,7 @@ class Bitacora_controller extends CI_Controller
 				$ficha_predial = str_replace('%20', ' ', $ficha_predial);
 
 				//si se paso por url entonces se carga el modelo que gestiona la informacion de la bitacora
-				//$this->load->model('BitacoraDAO');
+				// $this->load->model('BitacoraDAO');
 
 				//se pasa la ficha predial
 				$this->data['ficha_predial'] = $ficha_predial;
@@ -102,10 +102,10 @@ class Bitacora_controller extends CI_Controller
 				$this->data['propietario'] = $this->PropietariosDAO->obtener_primer_propietario($ficha_predial);
 
 				//se pasa toda la bitacora asociada a la ficha predial
-				//$this->data['bitacora'] = $this->obtener_tabla($this->BitacoraDAO->obtener_bitacora($ficha_predial));
+				// $this->data['bitacora'] = $this->obtener_tabla($this->BitacoraDAO->obtener_bitacora($ficha_predial));
 
 				//se establece el titulo de la pagina
-				$this->data['titulo_pagina'] = 'Bit&aacute;cora';
+				$this->data['titulo_pagina'] = 'Bit&aacute;cora de la ficha predial';
 
 				//se carga el template
 				$this->load->view('bitacora/bitacora_view', $this->data);
@@ -146,15 +146,8 @@ class Bitacora_controller extends CI_Controller
 				$radicado = $anotacion->radicado;
 				$anio = substr($radicado, 0,4);
 				$dependencia = substr($radicado, 4,3);
-				$pdf = 'http://orfeo.vinus.com.co/bodega/'.$anio.'/'.$dependencia.'/'.$radicado.'.pdf';
-				$tif = 'http://orfeo.vinus.com.co/bodega/'.$anio.'/'.$dependencia.'/'.$radicado.'.tif';
 
-				if (strlen(file_get_contents("$pdf")))
-				{
-					$archivo = $pdf;
-				} else {
-					$archivo = $tif;
-				}
+				$archivo = "http://orfeo.devimed.com.co/orfeo/linkArchivo.php?&PHPSESSID=180327092102o192168091ADMON&numrad={$radicado}";
 
 				$respuesta.='<td>';
 
