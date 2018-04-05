@@ -6,6 +6,21 @@
  */
 class BitacoraDAO extends CI_Model
 {
+	function __construct() {
+        parent::__construct();
+
+        /*
+         * db_orfeo es la conexion a los datos de Orfeo, que permitirá abrir archivos digitales de los radicados
+         * Esta se llama porque en el archivo database.php la variable ['orfeo']['pconnect] esta marcada como false,
+         * lo que quiere decir que no se conecta persistentemente sino cuando se le invoca, como en esta ocasión.
+         */
+        $this->db_orfeo = $this->load->database('orfeo', TRUE);
+    }
+
+    function obtener_verificacion($radicado){
+    	return $resultado = $this->db_orfeo->where("radi_nume_radi", $radicado)->select("sgd_rad_codigoverificacion codigo")->get("radicado")->row();
+    }
+
 	/**
 	 * Retorna los datos que hay en la bitacora asociados a una ficha predial especifica.
 	 *

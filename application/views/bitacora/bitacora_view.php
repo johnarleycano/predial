@@ -122,7 +122,7 @@
 						function abrir_ventana_dialogo(titulo, mensaje, funcion)
 						{
 							//en el template hay un div con id="cargando", despues de ese div se agrega otro con id="dialog-confirm"
-							$('#cargando').append('<div id="dialog-confirm"></div>');
+							$('#cargando').append('<div id="dialog-confirm" style="background-color: white;"></div>');
 							//al div que se acaba de crear se le agrega el atributo title="�Desea borrar este propietario?"
 							$('#dialog-confirm').attr('title', titulo);
 							//tambien se le agrega el siguiente codigo html entre sus tags de inicio y final

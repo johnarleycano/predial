@@ -64,6 +64,18 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
+// Conexión a Orfeo
+// $db['orfeo']['hostname'] = 'pgsql:host=localhost;dbname=orfeo_db';
+// $db['orfeo']['username'] = 'postgres';
+// $db['orfeo']['password'] = '12345';
+// $db['orfeo']['database'] = 'orfeo_db';
+// $db['orfeo']['dbdriver'] = 'pdo';
+
+$db['orfeo']['hostname'] = 'pgsql:host=192.168.0.14;dbname=orfeo_db';
+$db['orfeo']['username'] = 'user_devimed';
+$db['orfeo']['password'] = '.fl0r3s.';
+$db['orfeo']['database'] = 'orfeo_db';
+$db['orfeo']['dbdriver'] = 'pdo';
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */

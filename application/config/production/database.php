@@ -52,7 +52,6 @@ $db['default']['hostname'] = '192.168.0.12';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'D3v1m3d*';
 $db['default']['database'] = 'predialdevimed';
-// $db['default']['database'] = 'predialdco';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -64,6 +63,19 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
+
+// Conexión a Orfeo
+// $db['orfeo']['hostname'] = 'pgsql:host=localhost;dbname=orfeo_db';
+// $db['orfeo']['username'] = 'postgres';
+// $db['orfeo']['password'] = '12345';
+// $db['orfeo']['database'] = 'orfeo_db';
+// $db['orfeo']['dbdriver'] = 'pdo';
+
+$db['orfeo']['hostname'] = 'pgsql:host=192.168.0.14;dbname=orfeo_db';
+$db['orfeo']['username'] = 'user_devimed';
+$db['orfeo']['password'] = '.fl0r3s.';
+$db['orfeo']['database'] = 'orfeo_db';
+$db['orfeo']['dbdriver'] = 'pdo';
 
 
 /* End of file database.php */

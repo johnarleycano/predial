@@ -115,58 +115,49 @@ class Bitacora_controller extends CI_Controller
 
 	function obtener_tabla($bitacora)
 	{
+		$this->load->model('BitacoraDAO');
+		
 		$permisos = $this->session->userdata('permisos');
 
 		$fila = 0;
-		$respuesta = '<table width="100%" id="tabla"><thead><tr><th>Fecha</th><th>Remitente</th><th>Titulo</th><th>Observaci&oacute;n</th><th>Radicado</th><th></th></tr></thead><tbody>';
+		
+		$respuesta = "<table width='100%' id='tabla'>";
+			$respuesta .= "<thead>";
+				$respuesta .= "<th>Fecha</th>";
+				$respuesta .= "<th>Remitente</th>";
+				$respuesta .= "<th>Título</th>";
+				$respuesta .= "<th>Observación</th>";
+				$respuesta .= "<th>Radicado</th>";
+				$respuesta .= "<th></th>";
+			$respuesta .= "</thead>";
 
-		foreach ($bitacora as $anotacion):
-			$respuesta.='<tr class="';
-			if($fila % 2 == 0)
-			{
-				$respuesta.='odd">';
-			}
-			else
-			{
-				$respuesta.='even">';
-			}
-				$respuesta.='<td class=" sorting_1">';
-					$respuesta.= $anotacion->fecha;
-				$respuesta.='</td>';
-				$respuesta.='<td>';
-					$respuesta.= $anotacion->remitente;
-				$respuesta.='</td>';
-				$respuesta.='<td>';
-					$respuesta.= $anotacion->titulo;
-				$respuesta.='</td>';
-				$respuesta.='<td>';
-					$respuesta.= $anotacion->observacion;
-				$respuesta.='</td>';
+			$respuesta .= "<tbody>";
+				foreach ($bitacora as $anotacion){
+					$verificacion = ($anotacion->radicado != "") ? $this->BitacoraDAO->obtener_verificacion($anotacion->radicado)->codigo : "" ;
+					$archivo = "http://orfeo.devimed.com.co/orfeo/externalFileController.php?nurad=$anotacion->radicado&radiveri=$verificacion";
 
-				$radicado = $anotacion->radicado;
-				$anio = substr($radicado, 0,4);
-				$dependencia = substr($radicado, 4,3);
+					$respuesta .= "<tr class='";
+					$respuesta .= ($fila % 2 == 0) ? "odd'>" : "even'>" ;
+						$respuesta .= "<td class='sorting_1' width='90px'>$anotacion->fecha</td>";
+						$respuesta .= "<td>$anotacion->remitente</td>";
+						$respuesta .= "<td>$anotacion->titulo</td>";
+						$respuesta .= "<td>$anotacion->observacion</td>";
+						$respuesta .= "<td><a href='$archivo' target='_blank'>$anotacion->radicado</a></td>";
+						$respuesta .= "<td width='90px'>";
+							if(isset($permisos['Bit&aacute;cora']['Editar anotaciones'])) {
+								$respuesta.= '<a title="Editar" href="'.site_url('bitacora_controller/editar_anotacion').'" rel="Editar" id="'.$anotacion->id_bitacora.'"><img src="'.base_url().'img/edit.png"></a>';
+							}
+							if(isset($permisos['Bit&aacute;cora']['Eliminar anotaciones'])) {
+								$respuesta.= '<a title="Eliminar" href="'.site_url('bitacora_controller/eliminar_anotacion').'" rel="Editar" id="'.$anotacion->id_bitacora.'"><img src="'.base_url().'img/delete.png"></a>';
+							}
+						$respuesta .= "</td>";
+					$respuesta .= "</tr>";
 
-				$archivo = "http://orfeo.devimed.com.co/orfeo/linkArchivo.php?&PHPSESSID=180327092102o192168091ADMON&numrad={$radicado}";
+					$fila++;
+				}
+			$respuesta .= "</tbody>";
+		$respuesta .= "</table>";
 
-				$respuesta.='<td>';
-
-					$respuesta.= '<a target="_blank" href="'.$archivo.'" onClick="window.open(this.href, this.target, width=800,height=600); return false;">'.$radicado.'</a>';
-
-				$respuesta.='</td>';
-				$respuesta.='<td width="90px">';
-					if(isset($permisos['Bit&aacute;cora']['Editar anotaciones'])) {
-						$respuesta.= '<a title="Editar" href="'.site_url('bitacora_controller/editar_anotacion').'" rel="Editar" id="'.$anotacion->id_bitacora.'"><img src="'.base_url().'img/edit.png"></a>';
-					}
-					if(isset($permisos['Bit&aacute;cora']['Eliminar anotaciones'])) {
-						$respuesta.= '<a title="Eliminar" href="'.site_url('bitacora_controller/eliminar_anotacion').'" rel="Editar" id="'.$anotacion->id_bitacora.'"><img src="'.base_url().'img/delete.png"></a>';
-					}
-				$respuesta.='</td>';
-			$respuesta.='</tr>';
-
-			$fila++;
-		endforeach;
-		$respuesta.='</tbody></table>';
 		return $respuesta;
 	}
 
