@@ -77,7 +77,7 @@
 	<?php echo form_fieldset_close(); ?>
 
 </div>
-<div id="dialog-confirm" hidden>
+<div id="dialog-confirm" style="background-color: white;" hidden>
 </div>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.dataTables.min.js"></script>
 <script type="text/javascript">

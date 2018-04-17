@@ -1,6 +1,4 @@
 <?php
-error_reporting(-1);
-
 require('site_predios/libraries/proj4php/vendor/autoload.php');
 
 use proj4php\Proj4php;
@@ -191,6 +189,7 @@ class Archivos_controller extends CI_Controller
 
 			$this->load->library('user_agent');
 			$this->data['es_ie'] = $this->agent->is_browser('Internet Explorer');
+			$this->data['ficha'] = $ficha;
 			$this->data['archivos'] = $nombres;
 			$this->data['directorio'] = $this->ruta_archivos.$ficha;
 			$this->data['script'] = "/site_predios/archivos_controller/subir_archivos/$ficha";
