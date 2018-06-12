@@ -582,7 +582,8 @@ class Actualizar_controller extends CI_Controller {
 			'estado_ambiental' => 		$this->input->post('estado_ambiental'),
 			'meta_contractual' => 		$this->input->post('meta_contractual'),
 			'disponibilidad_izquierda' => $this->input->post('disponibilidad_izquierda'),
-			'disponibilidad_derecha' => $this->input->post('disponibilidad_derecha')
+			'disponibilidad_derecha' => $this->input->post('disponibilidad_derecha'),
+			'fecha_remision_insumos' => $this->input->post('fecha_remision_insumos')
 		);
 
 		//se inserta la descripcion del predio
