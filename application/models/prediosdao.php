@@ -322,49 +322,7 @@ class PrediosDAO extends CI_Model
 
 	function obtener_fichas($requerido=null)
 	{
-		$sql_ =
-		"SELECT
-			(
-				SELECT
-					tbl_propietario.nombre
-				FROM
-					tbl_relacion
-				INNER JOIN tbl_propietario ON tbl_relacion.id_propietario = tbl_propietario.id_propietario
-				WHERE
-					tbl_relacion.ficha_predial = tbl_predio.ficha_predial
-				GROUP BY
-					tbl_relacion.ficha_predial
-			) AS propietario,
-			tbl_predio.id_predio,
-			tbl_predio.fecha_hora,
-			tbl_predio.ficha_predial,
-			tbl_usuarios.us_nombre,
-			tbl_usuarios.us_apellido,
-			(
-				SELECT
-					COUNT(usr.id)
-				FROM
-					tbl_unidades_sociales_residentes AS usr
-				WHERE
-					usr.ficha_predial = tbl_predio.ficha_predial
-			) usr,
-			(
-				SELECT
-					COUNT(usp.id)
-				FROM
-					tbl_unidades_sociales_productivas AS usp
-				WHERE
-					usp.ficha_predial = tbl_predio.ficha_predial
-			) usp
-		FROM
-			tbl_predio
-		INNER JOIN tbl_usuarios ON tbl_usuarios.id_usuario = tbl_predio.usuario
-		ORDER BY
-			tbl_predio.ficha_predial ASC";
-
-		if ($requerido) {
-			$requeridos = "WHERE p.requerido = 1";
-		}
+		$requeridos = ($requerido) ? "WHERE p.requerido = 1" : "";
 
 		$sql =
 		"SELECT
