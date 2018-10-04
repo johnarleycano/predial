@@ -55,27 +55,31 @@
 					<tr>
 
 						<td width="50%"><?php echo form_label('Relaci&oacute;n con el inmueble','relacion_inmueble'); ?></td>
-						<td width="10%"><?php echo form_dropdown('relacion_inmueble', $_relacion, utf8_decode($usr->id_relacion_inmueble)); ?></td>
+						<td width="10%"><?php echo form_dropdown('relacion_inmueble', $_relacion, 
+						(isset($usr->id_relacion_inmueble)) ? utf8_decode($usr->id_relacion_inmueble) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Responsable','responsable'); ?></td>
-						<td width="10%"><?php echo form_input('responsable',$usr->responsable); ?></td>
+						<td width="10%"><?php echo form_input('responsable',
+						(isset($usr->responsable)) ? utf8_decode($usr->responsable) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="30%"><?php echo form_label('Identificaci&oacute;n','identificacion'); ?></td>
-						<td width="10%"><?php echo form_input('identificacion', utf8_decode($usr->identificacion)); ?></td>
+						<td width="10%"><?php echo form_input('identificacion', 
+							(isset($usr->identificacion)) ? utf8_decode($usr->edad) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Edad','edad'); ?></td>
-						<td width="10%"><?php echo form_input('edad', utf8_decode($usr->edad)); ?></td>
+						<td width="10%"><?php echo form_input('edad', 
+							(isset($usr->edad)) ? utf8_decode($usr->edad) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="30%"><?php echo form_label('Ocupaci&oacute;n','ocupacion'); ?></td>
-						<td width="20%"><?php echo form_dropdown('ocupacion', $_ocupacion, utf8_decode($usr->id_ocupacion)); ?></td>
+						<td width="20%"><?php echo form_dropdown('ocupacion', $_ocupacion, (isset($usr->id_ocupacion)) ? utf8_decode($usr->id_ocupacion) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Otras actividades','otras_actividades'); ?></td>
-						<td width="10%"><?php echo form_input('otras_actividades', utf8_decode($usr->otras_actividades)); ?></td>
+						<td width="10%"><?php echo form_input('otras_actividades', (isset($usr->otras_actividades)) ? utf8_decode($usr->otras_actividades) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="30%"><?php echo form_label('Valor ingresos mensuales','ingresos_mensuales'); ?></td>
-						<td width="10%"><?php echo form_input('ingresos_mensuales', utf8_decode($usr->ingresos_mensuales)); ?></td>
+						<td width="10%"><?php echo form_input('ingresos_mensuales', (isset($usr->ingresos_mensuales)) ? utf8_decode($usr->ingresos_mensuales) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Datos de verificaci&oacute;n','datos_verificacion'); ?></td>
-						<td width="10%"><?php echo form_input('datos_verificacion', utf8_decode($usr->datos_verificacion)); ?></td>
+						<td width="10%"><?php echo form_input('datos_verificacion', (isset($usr->datos_verificacion)) ? utf8_decode($usr->datos_verificacion) : ""); ?></td>
 					</tr>
 				</tbody>
 			</table>
@@ -140,25 +144,25 @@
 				<tbody>
 					<tr>
 						<td width="20%"><?php echo form_label('Total ingresos','total_ingresos'); ?></td>
-						<td width="30%"><?php echo form_input('total_ingresos', utf8_decode($usr->total_ingresos)); ?></td>
+						<td width="30%"><?php echo form_input('total_ingresos', (isset($usr->total_ingresos)) ? utf8_decode($usr->total_ingresos) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Antigüedad (años)','antiguedad'); ?></td>
-						<td width="20%"><?php echo form_input('antiguedad', utf8_decode($usr->antiguedad)); ?></td>
+						<td width="20%"><?php echo form_input('antiguedad', (isset($usr->antiguedad)) ? utf8_decode($usr->antiguedad) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="20%"><?php echo form_label('Canon arrendamiento','canon'); ?></td>
-						<td width="30%"><?php echo form_input('canon', utf8_decode($usr->canon)); ?></td>
+						<td width="30%"><?php echo form_input('canon', (isset($usr->canon)) ? utf8_decode($usr->canon) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="40%"><?php echo form_label('¿Algún integrante posee otro inmueble?','integrante_posee_inmuebe'); ?></td>
-						<td width="10%"><?php echo form_dropdown('integrante_posee_inmuebe', array('' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($usr->integrante_posee_inmuebe)); ?></td>
+						<td width="10%"><?php echo form_dropdown('integrante_posee_inmuebe', array('' => ' ', '1' => 'Si', '0' => 'No'), (isset($usr->integrante_posee_inmuebe)) ? utf8_decode($usr->integrante_posee_inmuebe) : ""); ?></td>
 						<td width="30%"><?php echo form_label('¿Cuál?','integrante_inmueble'); ?></td>
-						<td width="20%"><?php echo form_input('integrante_inmueble', utf8_decode($usr->integrante_inmueble)); ?></td>
+						<td width="20%"><?php echo form_input('integrante_inmueble', (isset($usr->integrante_inmueble)) ? utf8_decode($usr->integrante_inmueble) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="40%"><?php echo form_label('En caso de traslado, ¿Pueden hacerlo a este?','traslado_inmueble'); ?></td>
-						<td width="10%"><?php echo form_dropdown('traslado_inmueble', array('' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($usr->traslado_inmueble)); ?></td>
+						<td width="10%"><?php echo form_dropdown('traslado_inmueble', array('' => ' ', '1' => 'Si', '0' => 'No'), (isset($usr->traslado_inmueble)) ? utf8_decode($usr->traslado_inmueble) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Por qué?','traslado_razon'); ?></td>
-						<td width="20%"><?php echo form_input('traslado_razon', utf8_decode($usr->traslado_razon)); ?></td>
+						<td width="20%"><?php echo form_input('traslado_razon', (isset($usr->traslado_razon)) ? utf8_decode($usr->traslado_razon) : ""); ?></td>
 					</tr>
 				</tbody>
 			</table>
@@ -170,25 +174,25 @@
 				<tbody>
 					<tr>
 						<td width="20%"><?php echo form_label('Guardería infantil','servicio_guarderia'); ?></td>
-						<td width="30%"><?php echo form_input('servicio_guarderia', utf8_decode($usr->servicio_guarderia)); ?></td>
+						<td width="30%"><?php echo form_input('servicio_guarderia', (isset($usr->servicio_guarderia)) ? utf8_decode($usr->servicio_guarderia) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Restaurante escolar','servicio_restaurante'); ?></td>
-						<td width="20%"><?php echo form_input('servicio_restaurante', utf8_decode($usr->servicio_restaurante)); ?></td>
+						<td width="20%"><?php echo form_input('servicio_restaurante', (isset($usr->servicio_restaurante)) ? utf8_decode($usr->servicio_restaurante) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="20%"><?php echo form_label('Transporte escolar','servicio_transporte'); ?></td>
-						<td width="30%"><?php echo form_input('servicio_transporte', utf8_decode($usr->servicio_transporte)); ?></td>
+						<td width="30%"><?php echo form_input('servicio_transporte', (isset($usr->servicio_transporte)) ? utf8_decode($usr->servicio_transporte) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Educación básica','servicio_educacion'); ?></td>
-						<td width="20%"><?php echo form_input('servicio_educacion', utf8_decode($usr->servicio_educacion)); ?></td>
+						<td width="20%"><?php echo form_input('servicio_educacion', (isset($usr->servicio_educacion)) ? utf8_decode($usr->servicio_educacion) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="20%"><?php echo form_label('Rehabilitación','servicio_rehabilitacion'); ?></td>
-						<td width="30%"><?php echo form_input('servicio_rehabilitacion', utf8_decode($usr->servicio_rehabilitacion)); ?></td>
+						<td width="30%"><?php echo form_input('servicio_rehabilitacion', (isset($usr->servicio_rehabilitacion)) ? utf8_decode($usr->servicio_rehabilitacion) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Apoyo geriátrico','servicio_geriatria'); ?></td>
-						<td width="20%"><?php echo form_input('servicio_geriatria', utf8_decode($usr->servicio_geriatria)); ?></td>
+						<td width="20%"><?php echo form_input('servicio_geriatria', (isset($usr->servicio_geriatria)) ? utf8_decode($usr->servicio_geriatria) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="20%"><?php echo form_label('Ninguno','servicio_ninguno'); ?></td>
-						<td width="30%"><?php echo form_input('servicio_ninguno', utf8_decode($usr->servicio_ninguno)); ?></td>
+						<td width="30%"><?php echo form_input('servicio_ninguno', (isset($usr->servicio_ninguno)) ? utf8_decode($usr->servicio_ninguno) : ""); ?></td>
 					</tr>
 				</tbody>
 			</table>
@@ -198,9 +202,9 @@
 				<tbody>
 					<tr>
 						<td width="40%"><?php echo form_label('Además de residir, ¿actividades productivas?','desarrollo_actividades_productivas'); ?></td>
-						<td width="10%"><?php echo form_dropdown('desarrollo_actividades_productivas', array('' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($usr->desarrollo_actividades_productivas)); ?></td>
+						<td width="10%"><?php echo form_dropdown('desarrollo_actividades_productivas', array('' => ' ', '1' => 'Si', '0' => 'No'), (isset($usr->desarrollo_actividades_productivas)) ? utf8_decode($usr->desarrollo_actividades_productivas) : ""); ?></td>
 						<td width="30%"><?php echo form_label('¿Cuáles?','actividades_productivas'); ?></td>
-						<td width="20%"><?php echo form_input('actividades_productivas', utf8_decode($usr->actividades_productivas)); ?></td>
+						<td width="20%"><?php echo form_input('actividades_productivas', (isset($usr->actividades_productivas)) ? utf8_decode($usr->actividades_productivas) : ""); ?></td>
 					</tr>
 				</tbody>
 			</table>
@@ -295,6 +299,8 @@
 	    $("#unidad_funcional").on("change", function(){
 	    	// Si se elige una unidad funcional
 	    	if ($(this).val() != "0") {
+	    		var fichas
+	    		
     			// Se carga los predios de esa unidad funcional
 		    	$.ajax({
 			        url: "<?php echo site_url('gestion_social_controller/cargar_fichas_semaforo'); ?>",
@@ -303,9 +309,11 @@
 			        dataType: "JSON",
 			        async: false,
 			        success: function(respuesta){
-			            return fichas = respuesta;
-			            // console.log(respuesta)
-			        }//Success
+			        	// return respuesta
+			            fichas = respuesta;
+			        },//Success
+			        error: function(respuesta){
+			        }//Error
 			    });//Ajax
 
 			    // Se resetea el select

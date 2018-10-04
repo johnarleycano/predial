@@ -497,35 +497,9 @@ class PrediosDAO extends CI_Model
 
 	function obtener_predios_semaforo($tramo)
 	{
-		if($ficha){
-			$condicion = "WHERE p.ficha_predial = '{$ficha}'";
-		}else{
-			$condicion = "";
-		}
-
-		$sql_ =
-		"SELECT
-			p.ficha_predial,
-			i.id_funcion_predio,
-			s_f.color AS color_funcion,
-			i.id_estado_via,
-			s_e.color AS color_estado,
-			i.estado_predio,
-			d.abscisa_inicial,
-			d.abscisa_final,
-			d.margen
-		FROM
-			tbl_predio AS p
-		LEFT JOIN tbl_identificacion AS i ON p.ficha_predial = i.ficha_predial
-		LEFT JOIN tbl_estados_semaforo AS s_f ON i.id_funcion_predio = s_f.id
-		LEFT JOIN tbl_estados_semaforo AS s_e ON i.id_estado_via = s_e.id
-		LEFT JOIN tbl_descripcion AS d ON d.ficha_predial = p.ficha_predial
-		$condicion";
-
 		$sql=
 		"SELECT
-			-- SUBSTRING_INDEX(p.ficha_predial, '-', - 1) AS Numero,
-			SUBSTRING(p.ficha_predial, 7, 15) Numero,
+			SUBSTRING(p.ficha_predial, 6, 15) Numero,
 			p.ficha_predial,
 			i.id_funcion_predio,
 			s_f.color AS color_funcion,
@@ -545,7 +519,6 @@ class PrediosDAO extends CI_Model
 			SUBSTRING_INDEX(p.ficha_predial, '-', 1) = '{$tramo}'
 		ORDER BY
 			Numero";
-
 
 		return $this->db->query($sql)->result();
 	} // obtener_predio_semaforo

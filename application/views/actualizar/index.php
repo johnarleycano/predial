@@ -73,8 +73,7 @@
 	 */
 	function listar()
 	{
-		// Carga de interfaz
-		// cargar_interfaz("cont_marcas", "<?php echo site_url('configuracion/cargar_interfaz'); ?>", {"tipo": "marcas_lista"});
+		
 	} // listar
 
 	/**

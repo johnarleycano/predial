@@ -27,15 +27,15 @@
 				<tbody>
 					<tr>
 						<td width="40%"><?php echo form_label('Fecha levantamiento','fecha_levantamiento'); ?></td>
-						<td width="10%"><?php echo form_input('fecha_levantamiento', utf8_decode($ficha_social->fecha_levantamiento)); ?></td>
+						<td width="10%"><?php echo form_input('fecha_levantamiento', (isset($ficha_social->fecha_levantamiento)) ? utf8_decode($ficha_social->fecha_levantamiento) : ""); ?></td>
 						<td width="40%"><?php echo form_label('Requerimiento del terreno','requerimiento_terreno'); ?></td>
-						<td width="10%"><?php echo form_dropdown('requerimiento_terreno', array('' => '', '1' => 'Parcial', '2' => 'Total'), utf8_decode($ficha_social->requerimiento_terreno)); ?></td>
+						<td width="10%"><?php echo form_dropdown('requerimiento_terreno', array('' => '', '1' => 'Parcial', '2' => 'Total'), (isset($ficha_social->requerimiento_terreno)) ? utf8_decode($ficha_social->requerimiento_terreno) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="40%"><?php echo form_label('¿Se requieren edificaciones?','requerimiento_edificaciones'); ?></td>
-						<td width="10%"><?php echo form_dropdown('requerimiento_edificaciones', array('' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($ficha_social->requerimiento_edificaciones)); ?></td>
+						<td width="10%"><?php echo form_dropdown('requerimiento_edificaciones', array('' => ' ', '1' => 'Si', '0' => 'No'), (isset($ficha_social->requerimiento_edificaciones)) ? utf8_decode($ficha_social->requerimiento_edificaciones) : ""); ?></td>
 						<td width="40%"><?php echo form_label('¿El valor a adquirir es inferior a 3 SLMMV?','area_adquirir'); ?></td>
-						<td width="10%"><?php echo form_dropdown('area_adquirir', array('' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($ficha_social->area_adquirir)); ?></td>
+						<td width="10%"><?php echo form_dropdown('area_adquirir', array('' => ' ', '1' => 'Si', '0' => 'No'), (isset($ficha_social->area_adquirir)) ? utf8_decode($ficha_social->area_adquirir) : ""); ?></td>
 					</tr>
 				</tbody>
 			</table>
@@ -50,7 +50,7 @@
 							<td><input type="checkbox" value="<?php echo $valor1->id; ?>" id="<?php echo $valor1->id; ?>" name="valor[]" <?php echo $check; ?> /><label for="<?php echo $valor1->id; ?>"><?php echo $valor1->nombre; ?></label></td>
 						<?php } ?>
 
-						<td><input type="text" name="otros_usos" placeholder="Otros" value="<?php echo $ficha_social->otros_usos; ?>" /></td>
+						<td><input type="text" name="otros_usos" placeholder="Otros" value="<?php (isset($ficha_social->otros_usos)) ? utf8_decode($ficha_social->otros_usos) : ""; ?>" /></td>
 					</tr>
 				</tbody>
 			</table>
@@ -60,15 +60,16 @@
 				<tbody>
 					<tr>
 						<td width="50%"><?php echo form_label('¿Se puede restablecer uso actual en &aacute;rea no requerida?','restablecer_uso_area_no_requerida'); ?></td>
-						<td width="10%"><?php echo form_dropdown('restablecer_uso_area_no_requerida', array('' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($ficha_social->restablecer_uso_area_no_requerida)); ?></td>
+						<td width="10%"><?php echo form_dropdown('restablecer_uso_area_no_requerida', array('' => ' ', '1' => 'Si', '0' => 'No'), (isset($ficha_social->restablecer_uso_area_no_requerida)) ? utf8_decode($ficha_social->restablecer_uso_area_no_requerida) : ""); ?></td>
 						<td width="30%"><?php echo form_label('¿Existe vivienda?','existe_vivienda'); ?></td>
-						<td width="10%"><?php echo form_dropdown('existe_vivienda', array('' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($ficha_social->existe_vivienda)); ?></td>
+						<td width="10%"><?php echo form_dropdown('existe_vivienda', array('' => ' ', '1' => 'Si', '0' => 'No'), (isset($ficha_social->existe_vivienda)) ? utf8_decode($ficha_social->existe_vivienda) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="50%"><?php echo form_label('¿La vivienda se encuentra habitada?','vivienda_habitada'); ?></td>
-						<td width="10%"><?php echo form_dropdown('vivienda_habitada', array(' ' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($ficha_social->vivienda_habitada)); ?></td>
+						<td width="10%"><?php echo form_dropdown('vivienda_habitada', array(' ' => ' ', '1' => 'Si', '0' => 'No'), 
+						(isset($ficha_social->vivienda_habitada)) ? utf8_decode($ficha_social->vivienda_habitada) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Se requiere para el proyecto?','requerida_proyecto'); ?></td>
-						<td width="10%"><?php echo form_dropdown('requerida_proyecto', array(' ' => ' ','0' => 'No',  '1' => 'Si', '2' => 'Parcial'), utf8_decode($ficha_social->requerida_proyecto)); ?></td>
+						<td width="10%"><?php echo form_dropdown('requerida_proyecto', array(' ' => ' ','0' => 'No',  '1' => 'Si', '2' => 'Parcial'), (isset($ficha_social->requerida_proyecto)) ? utf8_decode($ficha_social->requerida_proyecto) : ""); ?></td>
 					</tr>
 				</tbody>
 			</table>
@@ -136,9 +137,9 @@
 				<tbody>
 					<tr>
 						<td width="50%"><?php echo form_label('¿Existen edificaciones con infraesructura para actiidades productivas?','edificaciones_unidades_productivas'); ?></td>
-						<td width="10%"><?php echo form_dropdown('edificaciones_unidades_productivas', array('' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($ficha_social->edificaciones_unidades_productivas)); ?></td>
+						<td width="10%"><?php echo form_dropdown('edificaciones_unidades_productivas', array('' => ' ', '1' => 'Si', '0' => 'No'), (isset($ficha_social->edificaciones_unidades_productivas)) ? utf8_decode($ficha_social->edificaciones_unidades_productivas) : ""); ?></td>
 						<td width="10%"><?php echo form_label('¿Cuáles?','edificaciones_unidades_productivas_descripcion'); ?></td>
-						<td width="20%"><?php echo form_input('edificaciones_unidades_productivas_descripcion', utf8_decode($ficha_social->edificaciones_unidades_productivas_descripcion)); ?></td>
+						<td width="20%"><?php echo form_input('edificaciones_unidades_productivas_descripcion', (isset($ficha_social->edificaciones_unidades_productivas_descripcion)) ? utf8_decode($ficha_social->edificaciones_unidades_productivas_descripcion) : ""); ?></td>
 					</tr>
 				</tbody>
 			</table>
@@ -148,7 +149,7 @@
 			<?php echo form_fieldset('<b>Observaciones</b>'); ?>
 			<div align="center">
 				<?php echo form_label('Observaciones','observaciones')?><br>
-				<?php echo form_textarea('observaciones', utf8_decode($ficha_social->observaciones));?>
+				<?php echo form_textarea('observaciones', (isset($ficha_social->observaciones)) ? utf8_decode($ficha_social->observaciones) : "");?>
 			</div>
 			<?php echo form_fieldset_close(); ?>
 		</div>

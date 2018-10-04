@@ -60,39 +60,39 @@
 				<tbody>
 					<tr>
 						<td width="30%"><?php echo form_label('Relaci&oacute;n con el inmueble','relacion_inmueble'); ?></td>
-						<td width="20%"><?php echo form_dropdown('relacion_inmueble', $_relacion, utf8_decode($usp->relacion_inmueble)); ?></td>
+						<td width="20%"><?php echo form_dropdown('relacion_inmueble', $_relacion, (isset($usp->relacion_inmueble)) ? utf8_decode($usp->relacion_inmueble) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Titular','titular'); ?></td>
-						<td width="20%"><?php echo form_input('titular', ($usp->titular)); ?></td>
+						<td width="20%"><?php echo form_input('titular', (isset($usp->titular)) ? utf8_decode($usp->titular) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="30%"><?php echo form_label('Identificaci&oacute;n','identificacion'); ?></td>
-						<td width="10%"><?php echo form_input('identificacion', utf8_decode($usp->identificacion)); ?></td>
+						<td width="10%"><?php echo form_input('identificacion', (isset($usp->identificacion)) ? utf8_decode($usp->identificacion) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Datos de verificaci&oacute;n','datos_verificacion'); ?></td>
-						<td width="10%"><?php echo form_input('datos_verificacion', utf8_decode($usp->datos_verificacion)); ?></td>
+						<td width="10%"><?php echo form_input('datos_verificacion', (isset($usp->datos_verificacion)) ? utf8_decode($usp->datos_verificacion) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="30%"><?php echo form_label('Nombre o razón social','razon_social'); ?></td>
-						<td width="10%"><?php echo form_input('razon_social', utf8_decode($usp->razon_social)); ?></td>
+						<td width="10%"><?php echo form_input('razon_social', (isset($usp->razon_social)) ? utf8_decode($usp->razon_social) : ""); ?></td>
 						<td width="30%"><?php echo form_label('NIT','nit'); ?></td>
-						<td width="10%"><?php echo form_input('nit', utf8_decode($usp->nit)); ?></td>
+						<td width="10%"><?php echo form_input('nit', (isset($usp->nit)) ? utf8_decode($usp->nit) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="30%"><?php echo form_label('Descripción actividad','descripcion_actividad'); ?></td>
-						<td width="10%"><?php echo form_input('descripcion_actividad', $usp->descripcion_actividad); ?></td>
+						<td width="10%"><?php echo form_input('descripcion_actividad', (isset($usp->descripcion_actividad)) ? utf8_decode($usp->descripcion_actividad) : ""); ?></td>
 						<td width="30%"><?php echo form_label('Tiempo de desarrollo actividad (años)','antiguedad'); ?></td>
-						<td width="10%"><?php echo form_input('antiguedad', $usp->antiguedad); ?></td>
+						<td width="10%"><?php echo form_input('antiguedad', (isset($usp->antiguedad)) ? utf8_decode($usp->antiguedad) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="20%"><?php echo form_label('Canon arrendamiento','canon'); ?></td>
-						<td width="30%"><?php echo form_input('canon', utf8_decode($usp->canon)); ?></td>
+						<td width="30%"><?php echo form_input('canon', (isset($usp->canon)) ? utf8_decode($usp->canon) : ""); ?></td>
 						<td width="40%"><?php echo form_label('Vencimiento contrato','fecha_vencimiento_contrato'); ?></td>
-						<td width="10%"><?php echo form_input('fecha_vencimiento_contrato', utf8_decode($usp->fecha_vencimiento_contrato)); ?></td>
+						<td width="10%"><?php echo form_input('fecha_vencimiento_contrato', (isset($usp->fecha_vencimiento_contrato)) ? utf8_decode($usp->fecha_vencimiento_contrato) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="40%"><?php echo form_label('¿Lleva contabilidad?','lleva_contabilidad'); ?></td>
-						<td width="10%"><?php echo form_dropdown('lleva_contabilidad', array('' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($usp->lleva_contabilidad)); ?></td>
+						<td width="10%"><?php echo form_dropdown('lleva_contabilidad', array('' => ' ', '1' => 'Si', '0' => 'No'), (isset($usp->lleva_contabilidad)) ? utf8_decode($usp->lleva_contabilidad) : ""); ?></td>
 						<td width="20%"><?php echo form_label('¿Cuál?','contabilidad'); ?></td>
-						<td width="30%"><?php echo form_input('contabilidad', utf8_decode($usp->contabilidad)); ?></td>
+						<td width="30%"><?php echo form_input('contabilidad', (isset($usp->contabilidad)) ? utf8_decode($usp->contabilidad) : ""); ?></td>
 					</tr>
 				</tbody>
 			</table>
@@ -133,13 +133,13 @@
 				<tbody>
 					<tr>
 						<td width="20%"><?php echo form_label('Utilidades netas mensuales','utilidades_netas'); ?></td>
-						<td width="30%"><?php echo form_input('utilidades_netas', utf8_decode($usp->utilidades_netas)); ?></td>
+						<td width="30%"><?php echo form_input('utilidades_netas', (isset($usp->utilidades_netas)) ? utf8_decode($usp->utilidades_netas) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="40%"><?php echo form_label('¿Continúaría actividad?','continua_actividad'); ?></td>
-						<td width="10%"><?php echo form_dropdown('continua_actividad', array('' => ' ', '1' => 'Si', '0' => 'No'), utf8_decode($usp->continua_actividad)); ?></td>
+						<td width="10%"><?php echo form_dropdown('continua_actividad', array('' => ' ', '1' => 'Si', '0' => 'No'), (isset($usp->continua_actividad)) ? utf8_decode($usp->continua_actividad) : ""); ?></td>
 						<td width="20%"><?php echo form_label('¿Por qué?','continua_actividad_razon'); ?></td>
-						<td width="30%"><?php echo form_input('continua_actividad_razon', utf8_decode($usp->continua_actividad_razon)); ?></td>
+						<td width="30%"><?php echo form_input('continua_actividad_razon', (isset($usp->continua_actividad_razon)) ? utf8_decode($usp->continua_actividad_razon) : ""); ?></td>
 					</tr>
 				</tbody>
 			</table>
@@ -154,13 +154,13 @@
 				<tbody>
 					<tr>
 						<td width="20%"><?php echo form_label('Arrendador','nombre_arrendador'); ?></td>
-						<td width="30%"><?php echo form_input('nombre_arrendador', utf8_decode($usp->nombre_arrendador)); ?></td>
+						<td width="30%"><?php echo form_input('nombre_arrendador', (isset($usp->nombre_arrendador)) ? utf8_decode($usp->nombre_arrendador) : ""); ?></td>
 						<td width="20%"><?php echo form_label('Identificación','identificacion_arrendador'); ?></td>
-						<td width="30%"><?php echo form_input('identificacion_arrendador', utf8_decode($usp->identificacion_arrendador)); ?></td>
+						<td width="30%"><?php echo form_input('identificacion_arrendador', (isset($usp->identificacion_arrendador)) ? utf8_decode($usp->identificacion_arrendador) : ""); ?></td>
 					</tr>
 					<tr>
 						<td width="20%"><?php echo form_label('Datos de contacto','datos_contacto'); ?></td>
-						<td width="30%"><?php echo form_input('datos_contacto', utf8_decode($usp->datos_contacto)); ?></td>
+						<td width="30%"><?php echo form_input('datos_contacto', (isset($usp->datos_contacto)) ? utf8_decode($usp->datos_contacto) : ""); ?></td>
 					</tr>
 				</tbody>
 			</table>
