@@ -45,6 +45,7 @@ class Pagos_controller extends CI_Controller
 
 		$valor_predio = $this->PagosDAO->obtiene_avaluo($ficha_predial);
 		$total_pagos = $this->PagosDAO->obtiene_total_pagos($ficha_predial);
+		$total_pagos_social = $this->PagosDAO->obtiene_total_pagos($ficha_predial, "SOCIAL");
 		if($valor_predio->total_avaluo == 0) {
 			$porcentaje_pagado = 0;
 		}
@@ -53,6 +54,7 @@ class Pagos_controller extends CI_Controller
 		}
 		$this->data['valor_predio'] = number_format($valor_predio->total_avaluo, 3);
 		$this->data['total_pagado'] = number_format($total_pagos->valor, 3);
+		$this->data['total_pagado_social'] = number_format($total_pagos_social->valor, 3);
 		$this->data['porcentaje_pagado'] = number_format($porcentaje_pagado, 2);
 		$this->data['tabla'] = $this->obtiene_tabla($pagos);
 		$this->data['titulo_pagina'] = 'Pagos asociados a la ficha '.$ficha_predial;
@@ -70,6 +72,7 @@ class Pagos_controller extends CI_Controller
 			$pagos = $this->PagosDAO->obtener_pagos($ficha_predial);
 			$valor_predio = $this->PagosDAO->obtiene_avaluo($ficha_predial);
 			$total_pagos = $this->PagosDAO->obtiene_total_pagos($ficha_predial);
+			$total_pagos_social = $this->PagosDAO->obtiene_total_pagos($ficha_predial, "SOCIAL");
 			if($valor_predio->total_avaluo == 0) {
 				$porcentaje_pagado = 0;
 			}
@@ -81,6 +84,7 @@ class Pagos_controller extends CI_Controller
 				'tabla' => $this->obtiene_tabla($pagos),
 				'valor_predio' => number_format($valor_predio->total_avaluo, 3),
 				'total_pagado' => number_format($total_pagos->valor, 3),
+				'total_pagado_social' => number_format($total_pagos_social->valor, 3),
 				'porcentaje_pagado' => number_format($porcentaje_pagado, 3)
 			);
 			echo json_encode($respuesta);
@@ -95,7 +99,7 @@ class Pagos_controller extends CI_Controller
 	private function obtiene_tabla($pagos)
 	{
 		$fila = 0;
-		$respuesta = '<table width="100%" id="tabla"><thead><tr><th>N&uacute;mero de pago</th><th>Fecha</th><th>Documento de pago</th><th>Valor</th>';
+		$respuesta = '<table width="100%" id="tabla"><thead><tr><th>N&uacute;mero de pago</th><th>Fecha</th><th>Documento de pago</th><th>Factor</th><th>Valor</th>';
 		if($this->session->userdata('tipo_usuario') == 2) {
 			$respuesta .= '<th>&nbsp;</th>';
 		}
@@ -122,6 +126,9 @@ class Pagos_controller extends CI_Controller
 					$respuesta.= $pago->doc_pago;
 				$respuesta.='</td>';
 				$respuesta.='<td>';
+					$respuesta.= $pago->factor;
+				$respuesta.='</td>';
+				$respuesta.='<td>';
 					$respuesta.= number_format($pago->valor, 3);
 				$respuesta.='</td>';
 				if($this->session->userdata('tipo_usuario') == 2) {
@@ -141,11 +148,12 @@ class Pagos_controller extends CI_Controller
 		$ficha = 		$this->input->post('ficha');
 		$fecha = 		$this->input->post('fecha');
 		$documento = 	$this->input->post('documento');
+		$factor = 		$this->input->post('factor');
 		$valor = 		$this->input->post('valor');
 		
 		$this->load->model('PagosDAO');
 		$numero_pago = $this->PagosDAO->obtener_nuevo_numero_pago($ficha);
-		if($this->PagosDAO->insertar_pago($ficha, $numero_pago, $fecha, $documento, $valor))
+		if($this->PagosDAO->insertar_pago($ficha, $numero_pago, $fecha, $documento, $factor, $valor))
 		{
 			echo 'correcto';
 		}

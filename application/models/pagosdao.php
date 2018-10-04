@@ -40,12 +40,13 @@ class PagosDAO extends CI_Model
 		return $resultado->num_pago + 1;
 	}
 	
-	function insertar_pago($ficha_predial, $numero_pago, $fecha, $documento, $valor)
+	function insertar_pago($ficha_predial, $numero_pago, $fecha, $documento, $factor, $valor)
 	{
 		$this->db->set('ficha_predial', $ficha_predial);
 		$this->db->set('num_pago', $numero_pago);
 		$this->db->set('fecha_pago', $fecha);
 		$this->db->set('doc_pago', $documento);
+		$this->db->set('factor', $factor);
 		$this->db->set('valor', $valor);
 		$resultado = $this->db->insert('tbl_pagos');
 
@@ -79,10 +80,11 @@ class PagosDAO extends CI_Model
 		return $resultado;
 	}
 	
-	function obtiene_total_pagos($ficha_predial)
+	function obtiene_total_pagos($ficha_predial, $factor = "PREDIAL")
 	{
 		$this->db->select('sum(valor) as valor');
 		$this->db->where('ficha_predial', $ficha_predial);
+		$this->db->where('factor', $factor);
 		$resultado = $this->db->get('tbl_pagos')->row();
 
 		#accion de auditoria

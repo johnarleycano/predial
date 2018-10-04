@@ -25,6 +25,16 @@
 	<div class="clear">&nbsp;</div>
 	<table width="100%">
 		<tr>
+			<td><?php echo form_label('Compensaciones sociales'); ?></td>
+			<td></td>
+			<td><?php echo form_label('Total pagado', 'total_pagado_social'); ?></td>
+			<td>
+				<?php echo (isset($total_pagado_social)) ? form_input('total_pagado_social', $total_pagado_social, 'readonly') : form_input('total_pagado_social') ; ?>
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
 			<td><?php echo form_label('Valor del predio', 'valor_predio'); ?></td>
 			<td>
 				<?php 
@@ -72,6 +82,7 @@
 						<th>N&uacute;mero de pago</th>
 						<th>Fecha</th>
 						<th>Documento de pago</th>
+						<th>Factor</th>
 						<th>Valor</th>
 						<?php if($tipo_usuario == 2): ?>
 							<th>&nbsp;</th>
@@ -105,6 +116,10 @@
 			<tr>
 				<td><?php echo form_label('Documento de pago', 'documento_pago'); ?></td>
 				<td><?php echo form_input('documento_pago'); ?></td>
+			</tr>
+			<tr>
+				<td><?php echo form_label('Factor', 'factor'); ?></td>
+				<td><?= form_dropdown('factor', array('PREDIAL' => 'Predial','SOCIAL' => 'Social')); ?></td>
 			</tr>
 			<tr>
 				<td><?php echo form_label('Valor', 'valor'); ?></td>
@@ -215,6 +230,7 @@
 					var ficha = $.trim($('#form input[name=ficha_predial]').val());
 					var fecha = $.trim($('#dialog-form input[name=fecha]').val());
 					var documento = $.trim($('#dialog-form input[name=documento_pago]').val());
+					var factor = $.trim($('#dialog-form select[name=factor]').val());
 					var valor = $.trim($('#dialog-form input[name=valor]').val());
 					var error = false;
 
@@ -242,7 +258,8 @@
 					}
 					if( ! error )
 					{
-						$.post('<?php echo site_url('pagos_controller/nuevo_pago'); ?>', { ficha:ficha, fecha:fecha, documento:documento, valor:valor, <?php echo $this->security->get_csrf_token_name(); ?>:"<?php echo $this->security->get_csrf_hash(); ?>" },
+						console.log(factor)
+						$.post('<?php echo site_url('pagos_controller/nuevo_pago'); ?>', { ficha:ficha, fecha:fecha, documento:documento, valor:valor, factor: factor, <?php echo $this->security->get_csrf_token_name(); ?>:"<?php echo $this->security->get_csrf_hash(); ?>" },
 							function(msg)
 							{
 								if(msg == 'correcto')
@@ -307,6 +324,7 @@
 							});
 							$('#form input[name=valor_predio]').val(respuesta_json.valor_predio);
 							$('#form input[name=total_pagado]').val(respuesta_json.total_pagado);
+							$('#form input[name=total_pagado_social]').val(respuesta_json.total_pagado_social);
 							$('#form input[name=porcentaje_pagado]').val(respuesta_json.porcentaje_pagado);
 						}
 						else
