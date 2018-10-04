@@ -4,7 +4,7 @@ class PagosDAO extends CI_Model
 	function obtener_pagos($ficha_predial)
 	{
 		$this->db->where('ficha_predial', $ficha_predial);
-		$this->db->order_by('num_pago');
+		$this->db->order_by('fecha_pago', 'DESC');
 		$resultado = $this->db->get('tbl_pagos')->result();
 		
 		#accion de auditoria

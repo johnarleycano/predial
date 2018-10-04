@@ -106,7 +106,7 @@
 		echo form_fieldset_close(); 
 	?>
 	
-<div id="dialog-form" title="Agregar nuevo registro de pago">
+<div id="dialog-form" title="Agregar nuevo registro de pago" style="background-color: white; height: auto;">
 	<?php echo form_fieldset('Todos los datos son requeridos.'); ?>
 		<table>
 			<tr>

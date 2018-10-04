@@ -131,7 +131,7 @@ class Pagos_controller extends CI_Controller
 				$respuesta.='<td>';
 					$respuesta.= number_format($pago->valor, 3);
 				$respuesta.='</td>';
-				if (isset($permisos['Pagos']['Eliminad pagos']))
+				if (isset($permisos['Pagos']['Eliminad pagos'])){
 					$respuesta.='<td>';
 						$respuesta.= '<a title="Eliminar" href="'.site_url('pagos_controller/eliminar_pago/'.utf8_decode($pago->ficha_predial).'/'.utf8_decode($pago->num_pago)).'">'.img(base_url().'img/delete.png').'</a>';
 					$respuesta.='</td>';
