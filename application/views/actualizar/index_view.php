@@ -66,8 +66,7 @@
 	$(document).ready(function(){
 		$('#form table').dataTable({
 			"bJQueryUI": true,
-			"sPaginationType": "full_numbers"/*,
-			"order": [[ 2, "asc" ]]*/
+			"sPaginationType": "full_numbers",
 		});
 
 		$('#form a[href^="<?php echo site_url('consultas_controller') ?>"]').live('click', function(){

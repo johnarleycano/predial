@@ -49,7 +49,8 @@
 	$(document).ready(function(){
 		$('#form table').dataTable({
 			"bJQueryUI": true,
-			"sPaginationType": "full_numbers"
+			"sPaginationType": "full_numbers",
+			"stateSave": true,
 		});
 	});
 </script>

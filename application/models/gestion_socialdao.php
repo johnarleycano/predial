@@ -367,9 +367,19 @@ class Gestion_socialDAO extends CI_Model
 
 
 	function cargar_unidad_social_productiva($id){
-		$this->db->select('*');
-		$this->db->where('id', $id);
-	 	return $this->db->get('tbl_unidades_sociales_productivas')->row();
+		$sql =
+		"SELECT
+			usp.*
+		FROM
+			tbl_unidades_sociales_productivas AS usp 
+		WHERE
+			usp.id = $id";
+		
+	 	return $this->db->query($sql)->row();
+
+		// $this->db->select('*');
+		// $this->db->where('id', $id);
+	 	// return $this->db->get('tbl_unidades_sociales_productivas')->row();
 	}
 
 
