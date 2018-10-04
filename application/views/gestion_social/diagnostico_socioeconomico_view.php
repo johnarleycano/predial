@@ -1,69 +1,69 @@
 <div>
     <?= form_fieldset('<b>Identificación de impactos y diágnostico socioeconómicos</b>') ?>
         <?= form_label('Identificacion de impactos y diagnostico socioeconómico', 'diagnostico') ?>
-        <?php $data = array('name'=>'diagnostico', 'value'=> (isset($diagnostico->observaciones)) ? utf8_decode($diagnostico->observaciones) : "", 'rows'=>'10') ?>
+        <?php $data = array('name'=>'diagnostico', 'value'=> (isset($diagnostico->observaciones)) ? $diagnostico->observaciones : "", 'rows'=>'10') ?>
         <?= form_textarea($data) ?>
 </div>
 
 <div>
     <?= form_label('Factor de apoyo al restablecimiento de vivienda', 'apoyo_restablecimiento') ?>
-    <?php $data = array('name'=>'apoyo_restablecimiento', 'value'=> (isset($diagnostico->apoyo_restablecimiento)) ? utf8_decode($diagnostico->apoyo_restablecimiento) : "", 'style'=>'width:70%') ?>
+    <?php $data = array('name'=>'apoyo_restablecimiento', 'value'=> (isset($diagnostico->apoyo_restablecimiento)) ? $diagnostico->apoyo_restablecimiento : "", 'style'=>'width:70%') ?>
     <?= form_input($data) ?>
-    <?php $data = array('name'=>'apoyo_restablecimiento_valor', 'value' => (isset($diagnostico->apoyo_restablecimiento_valor)) ? utf8_decode($diagnostico->apoyo_restablecimiento_valor) : "", 'placeholder' => 'Subtotal', 'style'=>'float:right') ?>
+    <?php $data = array('name'=>'apoyo_restablecimiento_valor', 'value' => (isset($diagnostico->apoyo_restablecimiento_valor)) ? $diagnostico->apoyo_restablecimiento_valor : "", 'placeholder' => 'Subtotal', 'style'=>'float:right') ?>
     <?= form_input($data) ?>
 </div>
 
 <div>
     <?= form_label('Factor de apoyo a moradores', 'apoyo_moradores') ?>
     <br>
-    <?php $data = array('name'=>'apoyo_moradores', 'value'=> (isset($diagnostico->apoyo_moradores)) ? utf8_decode($diagnostico->apoyo_moradores) : "", 'style'=>'width:70%') ?>
+    <?php $data = array('name'=>'apoyo_moradores', 'value'=> (isset($diagnostico->apoyo_moradores)) ? $diagnostico->apoyo_moradores : "", 'style'=>'width:70%') ?>
     <?= form_input($data) ?>
-    <?php $data = array('name'=>'apoyo_moradores_valor', 'value'=> (isset($diagnostico->apoyo_moradores_valor)) ? utf8_decode($diagnostico->apoyo_moradores_valor) : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
+    <?php $data = array('name'=>'apoyo_moradores_valor', 'value'=> (isset($diagnostico->apoyo_moradores_valor)) ? $diagnostico->apoyo_moradores_valor : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
     <?= form_input($data) ?>
 </div>
 
 <div>
     <?= form_label('Factor de apoyo para tramites', 'apoyo_tramites') ?>
     <br>
-    <?php $data = array('name'=>'apoyo_tramites', 'value'=> (isset($diagnostico->apoyo_tramites)) ? utf8_decode($diagnostico->apoyo_tramites) : "", 'style'=>'width:70%') ?>
+    <?php $data = array('name'=>'apoyo_tramites', 'value'=> (isset($diagnostico->apoyo_tramites)) ? $diagnostico->apoyo_tramites : "", 'style'=>'width:70%') ?>
     <?= form_input($data) ?>
-    <?php $data = array('name'=>'apoyo_tramites_valor', 'value'=> (isset($diagnostico->apoyo_tramites_valor)) ? utf8_decode($diagnostico->apoyo_tramites_valor) : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
+    <?php $data = array('name'=>'apoyo_tramites_valor', 'value'=> (isset($diagnostico->apoyo_tramites_valor)) ? $diagnostico->apoyo_tramites_valor : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
     <?= form_input($data) ?>
 </div>
 
 <div>
     <?= form_label('Factor de apoyo por movilización', 'apoyo_movilizacion') ?>
     <br>
-    <?php $data = array('name'=>'apoyo_movilizacion', 'value'=> (isset($diagnostico->apoyo_movilizacion)) ? utf8_decode($diagnostico->apoyo_movilizacion) : "", 'style'=>'width:70%') ?>
+    <?php $data = array('name'=>'apoyo_movilizacion', 'value'=> (isset($diagnostico->apoyo_movilizacion)) ? $diagnostico->apoyo_movilizacion : "", 'style'=>'width:70%') ?>
     <?= form_input($data) ?>
-    <?php $data = array('name'=>'apoyo_movilizacion_valor', 'value'=> (isset($diagnostico->apoyo_movilizacion_valor)) ? utf8_decode($diagnostico->apoyo_movilizacion_valor) : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
+    <?php $data = array('name'=>'apoyo_movilizacion_valor', 'value'=> (isset($diagnostico->apoyo_movilizacion_valor)) ? $diagnostico->apoyo_movilizacion_valor : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
     <?= form_input($data) ?>
 </div>
 
 <div>
     <?= form_label('Restablecimiento de Servicios', 'restablecimiento_servicios') ?>
     <br>
-    <?php $data = array('name'=>'restablecimiento_servicios', 'value'=> (isset($diagnostico->restablecimiento_servicios)) ? utf8_decode($diagnostico->restablecimiento_servicios) : "", 'style'=>'width:70%') ?>
+    <?php $data = array('name'=>'restablecimiento_servicios', 'value'=> (isset($diagnostico->restablecimiento_servicios)) ? $diagnostico->restablecimiento_servicios : "", 'style'=>'width:70%') ?>
     <?= form_input($data) ?>
-    <?php $data = array('name'=>'restablecimiento_servicios_valor', 'value'=> (isset($diagnostico->restablecimiento_servicios_valor)) ? utf8_decode($diagnostico->restablecimiento_servicios_valor) : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
+    <?php $data = array('name'=>'restablecimiento_servicios_valor', 'value'=> (isset($diagnostico->restablecimiento_servicios_valor)) ? $diagnostico->restablecimiento_servicios_valor : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
     <?= form_input($data) ?>
 </div>
 
 <div>
     <?= form_label('Restablecimientos de medios Economicos', 'restablecimiento_economico') ?>
     <br>
-    <?php $data = array('name'=>'restablecimiento_economico', 'value'=> (isset($diagnostico->restablecimiento_economico)) ? utf8_decode($diagnostico->restablecimiento_economico) : "", 'style'=>'width:70%') ?>
+    <?php $data = array('name'=>'restablecimiento_economico', 'value'=> (isset($diagnostico->restablecimiento_economico)) ? $diagnostico->restablecimiento_economico : "", 'style'=>'width:70%') ?>
     <?= form_input($data) ?>
-    <?php $data = array('name'=>'restablecimiento_economico_valor', 'value'=> (isset($diagnostico->restablecimiento_economico_valor)) ? utf8_decode($diagnostico->restablecimiento_economico_valor) : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
+    <?php $data = array('name'=>'restablecimiento_economico_valor', 'value'=> (isset($diagnostico->restablecimiento_economico_valor)) ? $diagnostico->restablecimiento_economico_valor : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
     <?= form_input($data) ?>
 </div>
 
 <div>
     <?= form_label('Apoyo a arrendadores', 'apoyo_arrendadores') ?>
     <br>
-    <?php $data = array('name'=>'apoyo_arrendadores', 'value'=> (isset($diagnostico->apoyo_arrendadores)) ? utf8_decode($diagnostico->apoyo_arrendadores) : "", 'style'=>'width:70%') ?>
+    <?php $data = array('name'=>'apoyo_arrendadores', 'value'=> (isset($diagnostico->apoyo_arrendadores)) ? $diagnostico->apoyo_arrendadores : "", 'style'=>'width:70%') ?>
     <?= form_input($data) ?>
-    <?php $data = array('name'=>'apoyo_arrendadores_valor', 'value'=> (isset($diagnostico->apoyo_arrendadores_valor)) ? utf8_decode($diagnostico->apoyo_arrendadores_valor) : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
+    <?php $data = array('name'=>'apoyo_arrendadores_valor', 'value'=> (isset($diagnostico->apoyo_arrendadores_valor)) ? $diagnostico->apoyo_arrendadores_valor : "", 'placeholder'=>'Subtotal', 'style'=>'float:right') ?>
     <?= form_input($data) ?>
 </div>
 <script type="text/javascript">
