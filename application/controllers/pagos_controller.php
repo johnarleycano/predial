@@ -1,12 +1,12 @@
 <?php
 class Pagos_controller extends CI_Controller
 {
-
 	var $data = array();
 	
 	function __construct()
 	{
 		parent::__construct();
+
 		//si el usuario no esta logueado
 		if($this->session->userdata('id_usuario') != TRUE)
 		{
@@ -98,6 +98,9 @@ class Pagos_controller extends CI_Controller
 	
 	private function obtiene_tabla($pagos)
 	{
+		//se obtienen los permisos del usuario
+		$permisos = $this->session->userdata('permisos');
+		
 		$fila = 0;
 		$respuesta = '<table width="100%" id="tabla"><thead><tr><th>N&uacute;mero de pago</th><th>Fecha</th><th>Documento de pago</th><th>Factor</th><th>Valor</th>';
 		if($this->session->userdata('tipo_usuario') == 2) {
@@ -131,10 +134,12 @@ class Pagos_controller extends CI_Controller
 				$respuesta.='<td>';
 					$respuesta.= number_format($pago->valor, 3);
 				$respuesta.='</td>';
-				if (isset($permisos['Pagos']['Eliminad pagos'])){
+				if (isset($permisos['Pagos']['Eliminar pagos'])){
 					$respuesta.='<td>';
 						$respuesta.= '<a title="Eliminar" href="'.site_url('pagos_controller/eliminar_pago/'.utf8_decode($pago->ficha_predial).'/'.utf8_decode($pago->num_pago)).'">'.img(base_url().'img/delete.png').'</a>';
 					$respuesta.='</td>';
+				} else {
+					$respuesta .= '<td></td>';
 				}
 			$respuesta.='</tr>';
 			
