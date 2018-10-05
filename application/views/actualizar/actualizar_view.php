@@ -36,9 +36,10 @@ $tipo_tenencia = array(
 
 $uso_terreno = array(
 	' ' => ' ',
+	'INDUSTRIAL' => 'INDUSTRIAL',
 	'INSTITUCIONAL' => 'INSTITUCIONAL',
 	'RURAL' => 'RURAL',
-	'URBANO' => 'URBANO'
+	'URBANO' => 'URBANO',
 );
 
 $uso_edificacion = array(
