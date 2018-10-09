@@ -64,7 +64,7 @@
 					<tr>
 						<td width="30%"><?php echo form_label('Identificaci&oacute;n','identificacion'); ?></td>
 						<td width="10%"><?php echo form_input('identificacion', 
-							(isset($usr->identificacion)) ? $usr->edad : ""); ?></td>
+							(isset($usr->identificacion)) ? $usr->identificacion : ""); ?></td>
 						<td width="30%"><?php echo form_label('Edad','edad'); ?></td>
 						<td width="10%"><?php echo form_input('edad', 
 							(isset($usr->edad)) ? $usr->edad : ""); ?></td>
