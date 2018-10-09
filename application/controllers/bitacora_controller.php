@@ -1,4 +1,5 @@
 <?php
+	// error_reporting(E_ALL);
 class Bitacora_controller extends CI_Controller
 {
 	var $data = array();
@@ -60,6 +61,26 @@ class Bitacora_controller extends CI_Controller
 		else {
 			echo "Ocurri&oacute; un error al intentar guardar la anotaci&oacute;n, por favor intente nuevamente.";
 		}
+	}
+
+	function orfeo(){
+		error_reporting(E_ALL);
+		ini_set('display_errors', 1);
+
+		/*$user = "user_devimed";
+		$password = ".fl0r3s.";
+		$dbname = "orfeo_db";
+		$port = 5432;
+		$host = "192.168.0.14";
+
+		$cadenaConexion = "host=$host port=$port dbname=$dbname user=$user password=$password";
+
+		$conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: ".pg_last_error());
+		echo "<h3>Conexion Exitosa PHP - PostgreSQL</h3><hr><br>";*/
+		$this->db_orfeo = $this->load->database('orfeo', TRUE);
+		$resultados = $this->bitacoraDAO->obtener_verificacion("2015");
+		print_r($resultados);
+		
 	}
 
 	function obtener_bitacora()
@@ -133,8 +154,9 @@ class Bitacora_controller extends CI_Controller
 
 			$respuesta .= "<tbody>";
 				foreach ($bitacora as $anotacion){
-					$verificacion = ($anotacion->radicado != "") ? $this->BitacoraDAO->obtener_verificacion($anotacion->radicado)->codigo : "" ;
-					$archivo = "http://orfeo.devimed.com.co/orfeo/externalFileController.php?nurad=$anotacion->radicado&radiveri=$verificacion";
+					// $verificacion = ($anotacion->radicado != "") ? $this->BitacoraDAO->obtener_verificacion($anotacion->radicado)->codigo : "" ;
+					// $archivo = "http://orfeo.devimed.com.co/orfeo/externalFileController.php?nurad=$anotacion->radicado&radiveri=$verificacion";
+					$verificacion = "#";
 
 					$respuesta .= "<tr class='";
 					$respuesta .= ($fila % 2 == 0) ? "odd'>" : "even'>" ;

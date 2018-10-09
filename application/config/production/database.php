@@ -71,11 +71,13 @@ $db['default']['stricton'] = FALSE;
 // $db['orfeo']['database'] = 'orfeo_db';
 // $db['orfeo']['dbdriver'] = 'pdo';
 
-$db['orfeo']['hostname'] = 'pgsql:host=192.168.0.14;dbname=orfeo_db';
+$db['orfeo']['hostname'] = '192.168.0.14';
 $db['orfeo']['username'] = 'user_devimed';
 $db['orfeo']['password'] = '.fl0r3s.';
 $db['orfeo']['database'] = 'orfeo_db';
-$db['orfeo']['dbdriver'] = 'pdo';
+$db['orfeo']['dbdriver'] = 'postgre';
+$db['orfeo']['db_debug'] = FALSE;
+$db['orfeo']['port'] = 5432;
 
 
 /* End of file database.php */

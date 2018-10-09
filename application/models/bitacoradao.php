@@ -14,7 +14,7 @@ class BitacoraDAO extends CI_Model
          * Esta se llama porque en el archivo database.php la variable ['orfeo']['pconnect] esta marcada como false,
          * lo que quiere decir que no se conecta persistentemente sino cuando se le invoca, como en esta ocasión.
          */
-        $this->db_orfeo = $this->load->database('orfeo', TRUE);
+        // $this->db_orfeo = $this->load->database('orfeo', TRUE);
     }
 
     function obtener_verificacion($radicado){
