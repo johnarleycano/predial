@@ -52,9 +52,10 @@ class Pagos_controller extends CI_Controller
 		else {
 			$porcentaje_pagado = ($total_pagos->valor / $valor_predio->total_avaluo) * 100;
 		}
-		$this->data['valor_predio'] = number_format($valor_predio->total_avaluo, 3);
-		$this->data['total_pagado'] = number_format($total_pagos->valor, 3);
-		$this->data['total_pagado_social'] = number_format($total_pagos_social->valor, 3);
+				
+		$this->data['valor_predio'] = '$ '.number_format($valor_predio->total_avaluo, 0, '', '.');
+		$this->data['total_pagado'] = '$ '.number_format($total_pagos->valor, 0, '', '.');
+		$this->data['total_pagado_social'] = '$ '.number_format($total_pagos_social->valor, 0, '', '.');
 		$this->data['porcentaje_pagado'] = number_format($porcentaje_pagado, 2);
 		$this->data['tabla'] = $this->obtiene_tabla($pagos);
 		$this->data['titulo_pagina'] = 'Pagos asociados a la ficha '.$ficha_predial;
@@ -82,10 +83,10 @@ class Pagos_controller extends CI_Controller
 			$respuesta = array(
 				'resultado' => 'correcto',
 				'tabla' => $this->obtiene_tabla($pagos),
-				'valor_predio' => number_format($valor_predio->total_avaluo, 3),
-				'total_pagado' => number_format($total_pagos->valor, 3),
-				'total_pagado_social' => number_format($total_pagos_social->valor, 3),
-				'porcentaje_pagado' => number_format($porcentaje_pagado, 3)
+				'valor_predio' => '$ '.number_format($valor_predio->total_avaluo, 0, '', '.'),
+				'total_pagado' => '$ '.number_format($total_pagos->valor, 0, '', '.'),
+				'total_pagado_social' => '$ '.number_format($total_pagos_social->valor, 0, '', '.'),
+				'porcentaje_pagado' => $porcentaje_pagado,
 			);
 			echo json_encode($respuesta);
 		}
@@ -131,8 +132,8 @@ class Pagos_controller extends CI_Controller
 				$respuesta.='<td>';
 					$respuesta.= $pago->factor;
 				$respuesta.='</td>';
-				$respuesta.='<td>';
-					$respuesta.= number_format($pago->valor, 3);
+				$respuesta.='<td align="right">';
+					$respuesta.= '$ '.number_format($pago->valor, 0, '', '.');
 				$respuesta.='</td>';
 				if (isset($permisos['Pagos']['Eliminar pagos'])){
 					$respuesta.='<td>';
