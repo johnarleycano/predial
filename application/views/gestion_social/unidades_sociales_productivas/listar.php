@@ -47,13 +47,15 @@
 	</tbody>
 </table>
 
-<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.dataTables.min.js"></script>
-
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#form table').dataTable({
-			"bJQueryUI": true,
-			"sPaginationType": "full_numbers"
+			"scrollY": "400px",
+            "scrollCollapse": true,
+            "stateSave": true,
+            "bJQueryUI": true,
+			"sPaginationType": "full_numbers",
+			"stateSave": true,
 		});
 
 		//esta sentencia es para darle el estilo a los botones jquery.ui

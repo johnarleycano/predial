@@ -43,14 +43,16 @@
 	</thead>
 </table>
 
-<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.dataTables.min.js"></script>
-
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#form table').dataTable({
-			"bJQueryUI": true,
+		// Inicialización de la tabla
+        $('#form table').dataTable({
+            "scrollY": "400px",
+            "scrollCollapse": true,
+            "stateSave": true,
+            "bJQueryUI": true,
 			"sPaginationType": "full_numbers",
 			"stateSave": true,
-		});
+        })
 	});
 </script>

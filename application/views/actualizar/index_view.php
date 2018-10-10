@@ -61,12 +61,16 @@
 		</div>
 	<?php echo form_fieldset_close(); ?>
 </div>
-<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.dataTables.min.js"></script>
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#form table').dataTable({
-			"bJQueryUI": true,
+			"scrollY": "400px",
+            "scrollCollapse": true,
+            "stateSave": true,
+            "bJQueryUI": true,
 			"sPaginationType": "full_numbers",
+			"stateSave": true,
 		});
 
 		$('#form a[href^="<?php echo site_url('consultas_controller') ?>"]').live('click', function(){
