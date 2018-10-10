@@ -102,7 +102,7 @@ class Pagos_controller extends CI_Controller
 		$permisos = $this->session->userdata('permisos');
 		
 		$fila = 0;
-		$respuesta = '<table width="100%" id="tabla"><thead><tr><th>N&uacute;mero de pago</th><th>Fecha</th><th>Documento de pago</th><th>Factor</th><th>Valor</th>';
+		$respuesta = '<table width="100%" id="tabla"><thead><tr><th>N&uacute;mero de pago</th><th>Fecha</th><th>Documento de pago</th><th>Factor</th><th>Valor</th><th>Opciones</th>';
 		if($this->session->userdata('tipo_usuario') == 2) {
 			$respuesta .= '<th>&nbsp;</th>';
 		}
