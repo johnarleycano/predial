@@ -14,6 +14,7 @@
 
 <div>
     <?= form_label('Factor de apoyo al restablecimiento de vivienda', 'apoyo_restablecimiento') ?>
+    <br>
     <?php $data = array('name'=>'apoyo_restablecimiento', 'value'=> (isset($diagnostico->apoyo_restablecimiento)) ? $diagnostico->apoyo_restablecimiento : "", 'style'=>'width:70%') ?>
     <?= form_input($data) ?>
     <?php $data = array('name'=>'apoyo_restablecimiento_valor', 'value' => (isset($diagnostico->apoyo_restablecimiento_valor)) ? $diagnostico->apoyo_restablecimiento_valor : "", 'placeholder' => 'Subtotal', 'style'=>'float:right') ?>
