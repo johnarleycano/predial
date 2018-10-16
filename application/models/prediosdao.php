@@ -499,7 +499,7 @@ class PrediosDAO extends CI_Model
 	{
 		$sql=
 		"SELECT
-			SUBSTRING(p.ficha_predial, 6, 15) Numero,
+			SUBSTRING(p.ficha_predial, 7) Numero,
 			p.ficha_predial,
 			i.id_funcion_predio,
 			s_f.color AS color_funcion,
