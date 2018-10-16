@@ -49,10 +49,12 @@ class Gestion_social_controller extends CI_Controller {
 	}
 
 	function actualizar_diagnostico(){
-		if ($this->input->post('tipo') == null) {
-			echo $this->Gestion_socialDAO->actualizar_diagnostico($this->input->post('ficha'), $this->input->post('datos'));
+		$datos = $this->input->post('datos');
+
+		if($this->input->post('tipo') == '0'){
+			echo $this->Gestion_socialDAO->actualizar_diagnostico($this->input->post('ficha'), $datos);
 		} else {
-			echo $this->Gestion_socialDAO->actualizar_diagnostico($this->input->post('ficha'), $this->input->post('datos'), $this->input->post('tipo'), $this->input->post('id'));
+			echo $this->Gestion_socialDAO->actualizar_diagnostico($this->input->post('ficha'), $datos, $this->input->post('tipo'), $this->input->post('id'));
 		}
 	}
 
@@ -61,7 +63,9 @@ class Gestion_social_controller extends CI_Controller {
 	}
 
 	function actualizar_usr(){
-    	echo $this->Gestion_socialDAO->actualizar_usr($this->input->post('id'), $this->input->post('datos'));
+    	if($this->Gestion_socialDAO->actualizar_usr($this->input->post('id'), $this->input->post('datos'))){
+    		echo $this->input->post('id');
+    	}
 	}
 
 	function cargar_ficha(){
@@ -69,10 +73,10 @@ class Gestion_social_controller extends CI_Controller {
 	}
 
 	function cargar_diagnostico(){
-		if ($this->input->post('tipo') == null) {
-			echo count($this->Gestion_socialDAO->cargar_diagnostico($this->input->post('ficha')));
+		if ($this->input->post('tipo') == "0"){
+			print json_encode($this->Gestion_socialDAO->cargar_diagnostico($this->input->post('ficha')));
 		} else {
-			echo count($this->Gestion_socialDAO->cargar_diagnostico($this->input->post('ficha'), $this->input->post('tipo'), $this->input->post('id')));
+			print json_encode($this->Gestion_socialDAO->cargar_diagnostico($this->input->post('ficha'), $this->input->post('tipo'), $this->input->post('id')));
 		}
 	}
 
@@ -111,21 +115,16 @@ class Gestion_social_controller extends CI_Controller {
 
 	function diagnostico_social()
 	{
-		$ficha = $this->input->get('ficha');
-		$tipo = $this->input->get('tipo');
-		$id = $this->input->get('id');
+		$ficha = $this->input->post('ficha');
+		$tipo = $this->input->post('tipo');
+		$id = $this->input->post('id');
+
 		$this->data['ficha'] = $ficha;
-
-		if (isset($tipo)) {
-			$this->data['tipo'] = $tipo;
-			$this->data['id'] = $id;
-			$this->data['diagnostico'] = $this->Gestion_socialDAO->cargar_diagnostico($ficha, $tipo, $id);
-		} else {
-			$this->data['diagnostico'] = $this->Gestion_socialDAO->cargar_diagnostico($ficha);
-		}
-
-		$this->data['contenido_principal'] = 'gestion_social/diagnostico_socioeconomico_view';
-		$this->load->view('archivos/vista_auxiliar', $this->data);
+		$this->data['tipo'] = ($tipo) ? $tipo : 0;
+		$this->data['id'] = ($id) ? $id : 0;
+		
+		$this->data['diagnostico'] = $this->Gestion_socialDAO->cargar_diagnostico($ficha, $tipo, $id);
+		$this->load->view('gestion_social/diagnostico_socioeconomico_view', $this->data);
 	}
 
 	function ficha(){
@@ -176,8 +175,7 @@ class Gestion_social_controller extends CI_Controller {
 	}
 
 	function insertar_usp(){
-		$this->Gestion_socialDAO->insertar_usp($this->input->post('datos'));
-		echo mysql_insert_id();
+		echo $this->Gestion_socialDAO->insertar_usp($this->input->post('datos'));
 	}
 
 	function insertar_usr(){
@@ -189,11 +187,11 @@ class Gestion_social_controller extends CI_Controller {
 		if ($this->input->post('id_unidad_social') > 0) {
 			$datos = array("id_unidad_social" => $this->input->post('id_unidad_social'));
 			$ficha = 0;
-			echo "borrará fichas sociales";
+			// echo "borrará fichas sociales";
 		} else {
 			$datos = array("ficha_predial" => $this->input->post('ficha'));
 			$ficha = $this->input->post('ficha');
-			echo "borrará predios";
+			// echo "borrará predios";
 		} // if
 
 		// Primero, se borran los valores para esa ficha
@@ -211,7 +209,7 @@ class Gestion_social_controller extends CI_Controller {
                 );
 
                 //Se ejecuta el modelo que crea el permiso
-               	echo $this->Gestion_socialDAO->insertar_valor_ficha($arreglo);
+               	$this->Gestion_socialDAO->insertar_valor_ficha($arreglo);
 			}
 		}
 	}

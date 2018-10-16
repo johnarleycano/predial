@@ -1,7 +1,7 @@
-<?php
-?>
-<ul id="navigation">
+<input type="hidden" id="id_registro">
+<input type="hidden" id="ficha_registro">
 
+<ul id="navigation">
 	<?php // if(isset($permisos['Bit&aacute;cora']['Consultar'])) { ?><li><a onclick="javascript:generar_unidad_social_residente()" style="cursor: pointer;" title="Formato 13"><img src="<?php echo base_url('img/excel.png'); ?>"></a></li><?php // } ?>
 </ul>
 
@@ -274,9 +274,11 @@
 		var id = "<?php echo $id; ?>";
 		var ficha = $("input[name=ficha]");
 		var datos = {ficha: ficha.val(), tipo: 'id_usr', id:id};
-		$.get("<?php echo site_url('gestion_social_controller/diagnostico_social'); ?>", datos, function(vista){
-			$("#diagnostico").html(vista);
-		});
+
+		// $.get("<?php // echo site_url('gestion_social_controller/diagnostico_social'); ?>", datos, function(vista){
+		// 	$("#diagnostico").html(vista);
+		// });
+		$("#diagnostico").load("<?php echo site_url('gestion_social_controller/diagnostico_social'); ?>", datos)
 		
 		$( "#accordion" ).accordion
 		({
@@ -416,32 +418,11 @@
     			// url para crear
     			url = "<?php echo site_url('gestion_social_controller/insertar_usr'); ?>";
     		}
-
-    		// Se guardan los cambios en la ficha social
-        	$.ajax({
-		        url: url,
-		        data: {"id": id, "datos": datos},
-		        type: "POST",
-		        dataType: "html",
-		        async: false,
-		        success: function(respuesta){
-		            //Si la respuesta no es error
-		            if(respuesta){
-		                //Se almacena la respuesta como variable de éxito
-		                // exito = respuesta;
-		                console.log(respuesta)
-		            } else {
-		                //La variable de éxito será un mensaje de error
-		                // exito = 'error';
-		                console.log(respuesta)
-		            } //If
-		        },//Success
-		        error: function(respuesta){
-		            //Variable de exito será mensaje de error de ajax
-		            // exito = respuesta;
-	                console.log(respuesta)
-		        }//Error
-		    });//Ajax
+    		
+    		var id_registro = ajax(url, {"id": id, "datos": datos}, "HTML")
+    		
+    		$("#id_registro").val(id_registro)
+    		$("#ficha_registro").val(datos.ficha_predial)
 
         	location.href= "<?php echo site_url('gestion_social_controller/unidades_sociales_residentes'); ?>";
 		}); // click

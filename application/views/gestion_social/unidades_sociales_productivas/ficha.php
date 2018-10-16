@@ -1,3 +1,6 @@
+<input type="hidden" id="id_registro">
+<input type="hidden" id="ficha_registro">
+
 <ul id="navigation">
 	<?php
 	// if(isset($permisos['Bit&aacute;cora']['Consultar'])) { ?><li><a onclick="javascript:generar_unidad_social_productiva()" style="cursor: pointer;" title="Formato 13"><img src="<?php echo base_url('img/excel.png'); ?>"></a></li><?php // } ?>
@@ -254,16 +257,17 @@
 } // if
 ?>
 
-
 <script type="text/javascript">
 	$(document).ready(function(){
 		// llamado a la vista diagnostico socioeconomico
 		var id = "<?php echo $id; ?>";
 		var ficha = $("input[name=ficha]");
 		var datos = {ficha: ficha.val(), tipo: 'id_usp', id:id};
-		$.get("<?php echo site_url('gestion_social_controller/diagnostico_social'); ?>", datos, function(vista){
-			$("#diagnostico").html(vista);
-		});
+
+		// $.get("<?php // echo site_url('gestion_social_controller/diagnostico_social'); ?>", datos, function(vista){
+		// 	$("#diagnostico").html(vista);
+		// });
+		$("#diagnostico").load("<?php echo site_url('gestion_social_controller/diagnostico_social'); ?>", datos)
 
 		$( "#accordion" ).accordion
 		({
@@ -392,28 +396,11 @@
     			url = "<?php echo site_url('gestion_social_controller/insertar_usp'); ?>";
     		}
 
-    		// Se guardan los cambios en la ficha social
-        	$.ajax({
-		        url: url,
-		        data: {"id": id, "datos": datos},
-		        type: "POST",
-		        dataType: "html",
-		        async: false,
-		        success: function(respuesta){
-		            //Si la respuesta no es error
-		            if(respuesta){
-		                //Se almacena la respuesta como variable de éxito
-		                // exito = respuesta;
-		                return nuevo_id = respuesta;
-		            } // if
-		        }//Success
-		    });//Ajax
-
-		    if (id == 0) {
-		    	id = nuevo_id;
-		    }
-
-		    console.log("nuevo id es " + id);
+    		var id_registro = ajax(url, {"id": id, "datos": datos}, "HTML")
+    		
+    		$("#id_registro").val(id_registro)
+    		$("#ficha_registro").val(datos.ficha_predial)
+    		
         	// Arreglo vacío
             var valores = new Array();
 
@@ -425,7 +412,7 @@
 	                valores.push($(this).val());
                 };
         	});
-        	console.log(valores);
+        	// console.log(valores)
 
         	// Se guardan los valores para la ficha
         	$.ajax({
@@ -449,6 +436,6 @@
 		    });//Ajax
 
         	location.href= "<?php echo site_url('gestion_social_controller/unidades_sociales_productivas'); ?>";
-		}); // guardar
-	});
+		})
+	})
 </script>

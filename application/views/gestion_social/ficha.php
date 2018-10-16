@@ -196,10 +196,15 @@
 	$(document).ready(function(){
 		// llamado a la vista diagnostico socioeconomico
 		var ficha = $("input[name=ficha]");
-		var datos = {ficha: ficha.val()};
-		$.get("<?php echo site_url('gestion_social_controller/diagnostico_social'); ?>", datos, function(vista){
-			$("#diagnostico").html(vista);
-		});
+		var datos = {
+			ficha: ficha.val()
+		};
+
+		// $.get("<?php // echo site_url('gestion_social_controller/diagnostico_social'); ?>", datos, function(vista){
+		// 	$("#diagnostico").html(vista);
+		// });
+		$("#diagnostico").load("<?php echo site_url('gestion_social_controller/diagnostico_social'); ?>", datos)
+
 		//este script unido con jquery es el encargado de dar el estilo css a las secciones del formulario dinamicamente
 		$( "#accordion" ).accordion
 		({

@@ -14,15 +14,16 @@ class Gestion_socialDAO extends CI_Model
         }
 	}
 
-	function actualizar_diagnostico($ficha, $datos, $tipo=null, $id=null){
-		if ($tipo) {
+	function actualizar_diagnostico($ficha, $datos, $tipo = "0", $id = null){
+		if ($tipo == "0") {
+			$this->db->where(array("id_usr" => null, "id_usp" => null));
+		}else{
 			$this->db->where($tipo, $id);
 		}
+		
 		$this->db->where('ficha_predial', $ficha);
-		if($this->db->update('tbl_diagnostico_social', $datos)){
-			//Retorna verdadero
-			return true;
-		}
+		
+		return $this->db->update('tbl_diagnostico_social', $datos);
 	}
 
 	function actualizar_usr($id, $datos){
@@ -47,11 +48,13 @@ class Gestion_socialDAO extends CI_Model
 	 	return $this->db->get('tbl_ficha_social')->row();
 	}
 
-	function cargar_diagnostico($ficha_predial, $tipo=null, $id=null){
-		$this->db->select('*');
-		if ($tipo) {
+	function cargar_diagnostico($ficha_predial, $tipo = "0", $id = null){
+		if ($tipo == "0"){
+			$this->db->where(array("id_usr" => null, "id_usp" => null));
+		} else {
 			$this->db->where($tipo, $id);
 		}
+
 		$this->db->where('ficha_predial', $ficha_predial);
 		return $this->db->get('tbl_diagnostico_social')->row();
 	}
@@ -97,13 +100,13 @@ class Gestion_socialDAO extends CI_Model
 
 	function insertar_usp($datos){
 		if($this->db->insert('tbl_unidades_sociales_productivas', $datos)){
-			return true;
+			return $this->db->insert_id();
 		}
 	}
 
 	function insertar_usr($datos){
 		if($this->db->insert('tbl_unidades_sociales_residentes', $datos)){
-			return true;
+			return $this->db->insert_id();
 		}
 	}
 

@@ -18,7 +18,7 @@ $permisos = $this->session->userdata('permisos');
 	 * @return void
 	 */
 	function generar_caracterizacion_general(){
-		// $("#form").load("<?php echo site_url(''); ?>" + "/" + "id_predio" + "/" + "ficha");
+		// $("#form").load("<?php // echo site_url(''); ?>" + "/" + "id_predio" + "/" + "ficha");
 		location.href= "informes_controller/caracterizacion_general"
 	}
 
