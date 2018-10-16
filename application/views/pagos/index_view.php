@@ -84,9 +84,6 @@
 						<th>Documento de pago</th>
 						<th>Factor</th>
 						<th>Valor</th>
-						<?php if($tipo_usuario == 2): ?>
-							<th>&nbsp;</th>
-						<?php endif;?>
 					</tr>
 				</thead>
 					<tbody></tbody>
