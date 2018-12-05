@@ -195,6 +195,12 @@ class InformesDAO extends CI_Model
 		return $this->db->query($query)->result();
 	}
 
+
+	function obtener_areas_remanentes() {
+		$query = "select * from areas_remanentes";
+		return $this->db->query($query)->result();
+	}
+
 	function obtener_predios_agrupados($unidad_funcional = NULL){
 		($unidad_funcional) ? $unidad = "AND p.ficha_predial LIKE '{$unidad_funcional}%'" : $unidad = "" ;
 		$sql =

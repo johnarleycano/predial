@@ -619,6 +619,27 @@ class Informes_controller extends CI_Controller
 		$this->data['titulo_pagina'] = "Generación de mapas";
 		$this->load->view('includes/template', $this->data);
 	}
+
+	function areas_remanentes_excel(){
+		$this->load->model('PropietariosDAO');
+		$permisos = $this->session->userdata('permisos');
+
+		# verificar permisos
+		if(!isset($permisos['Informes']['Gestión predial']) ) {
+  			$this->session->set_flashdata('error', 'Usted no cuenta con permisos para generar el informe de gestion predial.');
+  			redirect('');
+		}
+
+		#accion de auditoria
+		$auditoria = array(
+			'fecha_hora' => date('Y-m-d H:i:s', time()),
+			'id_usuario' => $this->session->userdata('id_usuario'),
+			'descripcion' => 'Consulta el informe de áreas remanentes'
+		);
+
+		$this->db->insert('auditoria', $auditoria);
+		$this->load->view('informes/areas_remanentes/excel');
+	}
 }
 
 /* End of file informes_controller.php */
