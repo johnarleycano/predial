@@ -521,6 +521,7 @@ class Informes_controller extends CI_Controller
 	}
 
 	function gestion_predial_excel(){
+		$this->load->model('PropietariosDAO');
 		$permisos = $this->session->userdata('permisos');
 		# verificar permisos
 		if(!isset($permisos['Informes']['Gestión predial']) ) {
