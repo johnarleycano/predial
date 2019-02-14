@@ -254,17 +254,17 @@ class Gestion_socialDAO extends CI_Model
 		LEFT JOIN tbl_valores_social AS vrelacion ON usr.relacion_inmueble = vrelacion.id
 		LEFT JOIN tbl_valores_social AS vocupacion ON usr.ocupacion = vocupacion.id
 		LEFT JOIN tbl_valores_social AS vrelacion1 ON usr.relacion_integrante1 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion2 ON usr.relacion_integrante2 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion3 ON usr.relacion_integrante3 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion4 ON usr.relacion_integrante4 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion5 ON usr.relacion_integrante5 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion6 ON usr.relacion_integrante6 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion7 ON usr.relacion_integrante7 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion8 ON usr.relacion_integrante8 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion9 ON usr.relacion_integrante9 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion10 ON usr.relacion_integrante10 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion11 ON usr.relacion_integrante11 = vrelacion1.id
-		LEFT JOIN tbl_valores_social AS vrelacion12 ON usr.relacion_integrante12 = vrelacion1.id
+		LEFT JOIN tbl_valores_social AS vrelacion2 ON usr.relacion_integrante2 = vrelacion2.id
+		LEFT JOIN tbl_valores_social AS vrelacion3 ON usr.relacion_integrante3 = vrelacion3.id
+		LEFT JOIN tbl_valores_social AS vrelacion4 ON usr.relacion_integrante4 = vrelacion4.id
+		LEFT JOIN tbl_valores_social AS vrelacion5 ON usr.relacion_integrante5 = vrelacion5.id
+		LEFT JOIN tbl_valores_social AS vrelacion6 ON usr.relacion_integrante6 = vrelacion6.id
+		LEFT JOIN tbl_valores_social AS vrelacion7 ON usr.relacion_integrante7 = vrelacion7.id
+		LEFT JOIN tbl_valores_social AS vrelacion8 ON usr.relacion_integrante8 = vrelacion8.id
+		LEFT JOIN tbl_valores_social AS vrelacion9 ON usr.relacion_integrante9 = vrelacion9.id
+		LEFT JOIN tbl_valores_social AS vrelacion10 ON usr.relacion_integrante10 = vrelacion10.id
+		LEFT JOIN tbl_valores_social AS vrelacion11 ON usr.relacion_integrante11 = vrelacion11.id
+		LEFT JOIN tbl_valores_social AS vrelacion12 ON usr.relacion_integrante12 = vrelacion12.id
 		LEFT JOIN tbl_valores_social AS vocupacion1 ON usr.ocupacion_integrante1 = vocupacion1.id
 		LEFT JOIN tbl_valores_social AS vocupacion2 ON usr.ocupacion_integrante2 = vocupacion2.id
 		LEFT JOIN tbl_valores_social AS vocupacion3 ON usr.ocupacion_integrante3 = vocupacion3.id
@@ -278,9 +278,8 @@ class Gestion_socialDAO extends CI_Model
 		LEFT JOIN tbl_valores_social AS vocupacion11 ON usr.ocupacion_integrante11 = vocupacion11.id
 		LEFT JOIN tbl_valores_social AS vocupacion12 ON usr.ocupacion_integrante12 = vocupacion12.id
 		WHERE
-			usr.id = {$id}";
+			usr.id = $id";
 	 	return $this->db->query($sql)->row();
-	 	print_r($sql);
 	}
 
 	function cargar_unidades_sociales_productivas($ficha_predial=null){

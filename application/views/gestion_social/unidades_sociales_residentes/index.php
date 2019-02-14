@@ -29,7 +29,7 @@ $permisos = $this->session->userdata('permisos');
 	function editar(id)
 	{
 		// Se carga la interfaz
-		$("#form").load("<?php echo site_url('gestion_social_controller/ficha_social_residente'); ?>" + "/" + id);
+		$("#form").load(`<?php echo site_url('gestion_social_controller/ficha_social_residente'); ?>/${id}`)
 	} // editar
 
 	/**
