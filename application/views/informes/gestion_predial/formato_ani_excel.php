@@ -10,8 +10,8 @@ $objPHPExcel = new PHPExcel();
 
 //Se establece la configuracion general
 $objPHPExcel->getProperties()
-	->setCreator("CF")
-	->setLastModifiedBy("CF")
+	->setCreator("John Arley Cano Salinas")
+	->setLastModifiedBy("John Arley Cano Salinas")
 	->setTitle("DEVIMED - Sistema de Gestión Predial (generado el ".$this->InformesDAO->formatear_fecha(date('Y-m-d')).' - '.date('h:i A').")")
 	->setSubject("Ficha predial - Formato ANI")
     ->setCategory("Reporte");
@@ -839,7 +839,7 @@ $objPHPExcel->getActiveSheet()->getHeaderFooter()->setOddFooter('&L&B' .$objPHPE
 header('Cache-Control: max-age=0');
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 // header('Content-Disposition: attachment; filename="'.$ficha.'Ficha predial".xls');
-header("Content-Disposition: attachment; filename='Ficha_predial.xlsx'");
+header("Content-Disposition: attachment; filename=Ficha_predial.xlsx");
 
 
 //Se genera el excel
